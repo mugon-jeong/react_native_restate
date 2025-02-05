@@ -2,7 +2,7 @@
 
 # dependencies
 node_modules/
-
+.idea
 # Expo
 .expo/
 dist/
@@ -34,5 +34,3 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
-
-app-example

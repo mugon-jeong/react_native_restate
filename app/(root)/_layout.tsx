@@ -1,9 +1,9 @@
 import { useGlobalContext } from "@/lib/global-provider";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ActivityIndicator } from "react-native";
-import { Redirect, Slot } from "expo-router";
+import { Redirect, Slot, Stack } from "expo-router";
 
-export default function AppLayout() {
+export default function RootLayout() {
   const { loading, isLoggedIn } = useGlobalContext();
   if (loading) {
     return (
@@ -16,5 +16,9 @@ export default function AppLayout() {
   }
   if (!isLoggedIn) return <Redirect href={"/sign-in"} />;
 
-  return <Slot />;
+  return (
+    <Stack>
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+    </Stack>
+  );
 }

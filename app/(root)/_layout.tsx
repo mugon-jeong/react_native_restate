@@ -16,9 +16,5 @@ export default function RootLayout() {
   }
   if (!isLoggedIn) return <Redirect href={"/sign-in"} />;
 
-  return (
-    <Stack>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-    </Stack>
-  );
+  return <Slot />;
 }

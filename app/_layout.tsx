@@ -25,9 +25,7 @@ export default function Layout() {
 
   return (
     <GlobalProvider>
-      <Stack>
-        <Stack.Screen name="(root)" options={{ headerShown: false }} />
-      </Stack>
+      <Stack screenOptions={{ headerShown: false }} />
     </GlobalProvider>
   );
 }

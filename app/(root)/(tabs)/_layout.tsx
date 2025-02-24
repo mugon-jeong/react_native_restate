@@ -9,7 +9,7 @@ const TabIcon = ({
   title,
 }: {
   focused: boolean;
-  icon: any;
+  icon: ImageSourcePropType;
   title: string;
 }) => (
   <View className="flex-1 mt-3 flex flex-col items-center">
@@ -31,7 +31,7 @@ const TabIcon = ({
   </View>
 );
 
-const TabLayout = () => {
+const TabsLayout = () => {
   return (
     <Tabs
       screenOptions={{
@@ -46,36 +46,37 @@ const TabLayout = () => {
       }}
     >
       <Tabs.Screen
-        name={"index"}
+        name="index"
         options={{
           title: "Home",
           headerShown: false,
           tabBarIcon: ({ focused }) => (
-            <TabIcon focused={focused} icon={icons.home} title={"Home"} />
+            <TabIcon focused={focused} icon={icons.home} title="Home" />
           ),
         }}
       />
       <Tabs.Screen
-        name={"explore"}
+        name="explore"
         options={{
           title: "Explore",
           headerShown: false,
           tabBarIcon: ({ focused }) => (
-            <TabIcon focused={focused} icon={icons.search} title={"Explore"} />
+            <TabIcon focused={focused} icon={icons.search} title="Explore" />
           ),
         }}
       />
       <Tabs.Screen
-        name={"profile"}
+        name="profile"
         options={{
           title: "Profile",
           headerShown: false,
           tabBarIcon: ({ focused }) => (
-            <TabIcon focused={focused} icon={icons.person} title={"Profile"} />
+            <TabIcon focused={focused} icon={icons.person} title="Profile" />
           ),
         }}
       />
     </Tabs>
   );
 };
-export default Tabs;
+
+export default TabsLayout;

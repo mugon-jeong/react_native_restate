@@ -1,4 +1,11 @@
-import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
+import {
+  Button,
+  FlatList,
+  Image,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import images from "@/constants/images";
 import icons from "@/constants/icons";
@@ -6,11 +13,13 @@ import Search from "@/components/Search";
 import { Card, FeaturedCard } from "@/components/Cards";
 import Filters from "@/components/Filters";
 import { useGlobalContext } from "@/lib/global-provider";
+import seed from "@/lib/seed";
 
 export default function Home() {
   const { user } = useGlobalContext();
   return (
     <SafeAreaView className={"bg-white h-full"}>
+      <Button title={"Seed"} onPress={seed} />
       <FlatList
         data={[1, 2, 3, 4]}
         renderItem={({ item }) => <Card />}

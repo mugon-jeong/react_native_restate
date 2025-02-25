@@ -14,6 +14,7 @@ export const config = {
   platform: "com.anonymous.restate",
   endpoint: process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT,
   projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID,
+  databaseId: process.env.EXPO_PUBLIC_APPWRITE_DATABASE_ID,
   galleriesCollectionId:
     process.env.EXPO_PUBLIC_APPWRITE_GALLERIES_COLLECTION_ID,
   reviewsCollectionId: process.env.EXPO_PUBLIC_APPWRITE_REVIEWS_COLLECTION_ID,
